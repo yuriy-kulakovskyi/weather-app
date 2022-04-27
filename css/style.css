@@ -384,6 +384,10 @@
   .week-list {
     left: 2%;
   }
+
+  .searchBar {
+    width: 90%;
+  }
 }
 
 @media (max-width: 332px) {

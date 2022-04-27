@@ -16,7 +16,7 @@ let weather = {
   displayWeather: function(data, DayNumber) {
     const cityname = data.city.name;
     const country = data.city.country;
-    const descr = data.list[0].weather[0].main;
+    let descr = data.list[0].weather[0].main;
     // DAY 1
     let date1 = data.list[0].dt_txt;
     const description1 = data.list[0].weather[0].description;
@@ -93,15 +93,19 @@ let weather = {
     switch (DayNumber) {
       case 1:
         modify(day1, arr1, temp1, description1, main1, pop1, humidity1, speed1);
+        descr = data.list[0].weather[0].main;
         break;
       case 2:
         modify(day2, arr2, temp2, description2, main2, pop2, humidity2, speed2);
+        descr = data.list[7].weather[0].main;
         break;
       case 3:
         modify(day3, arr3, temp3, description3, main3, pop3, humidity3, speed3);
+        descr = data.list[15].weather[0].main;
         break;
       case 4:
         modify(day4, arr4, temp4, description4, main4, pop4, humidity4, speed4);
+        descr = data.list[20].weather[0].main;
         break;
     }
 
